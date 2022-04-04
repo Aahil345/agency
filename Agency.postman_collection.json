@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "eae51350-392b-4d0a-8718-5b6fa516c21a",
+		"name": "Agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"agent\": {\n        \"AgencyId\": \"345\",\n        \"Name\": \"SAI KUMAR\",\n        \"Address1\": \"#56, QWERTYUI\",\n        \"Address2\": \"JAYANAGRA\",\n        \"State\": \"KARNATAKA\",\n        \"City\": \"BENGALURU\",\n        \"PhoneNumber\": \"8901234567\"\n    },\n    \"client\": {\n        \"ClientId\": \"123\",\n        \"AgencyId\": \"345\",\n        \"Name\": \"MUNI SAI\",\n        \"Email\": \"MUNISAI@GMAIL.COM\",\n        \"TotalBill\": 50387,\n        \"PhoneNumber\": \"8901234567\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateClient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"TotalBill\": 50000,\n    \"PhoneNumber\": \"8901234567\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/updateClient?ClientId=123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateClient"
+					],
+					"query": [
+						{
+							"key": "ClientId",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getClient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getClient"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
